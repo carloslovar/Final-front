@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/LOGO-BANNER.png";
+import headerImg from "../assets/img/logoperro3.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,7 +11,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "es un estudio creativo.", "es una productora de contenidos.", "unimos marcas y cultura." ];
+  const toRotate = [ "crónica.", "testimonio.", "análisis." ];
   const period = 2000;
 
   useEffect(() => {
@@ -55,10 +55,10 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Bienvenido a HYFN Agency</span>
-                <h1>{`Hola! HYFN Agency,`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "estudio creativo", "productora de contenido", "unimos marcas y cultura" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>La agencia HYFN ofrece una gama de servicios creativos con un enfoque en la diversidad y la inclusión.</p>
-                  <button onClick={() => console.log('connect')}>Conectémonos <ArrowRightCircle size={25} /></button>
+                <span className="tagline">PATAS POR EL CAMBIO</span>
+                <h1>{`REPORTAJE: `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "crónica", "testimonio", "análisis" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>Elecciones 2022: Tan solo el 50% de los virtuales alcaldes a los 43 distritos de Lima cuentan con propuestas a favor de las mascotas domésticas.</p>
+                  <button onClick={() => console.log('connect')}>Análisis <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
